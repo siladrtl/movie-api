@@ -12,7 +12,7 @@ namespace MovieApi.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) //sql bağlantı adresini yazan metot
         {
-            optionsBuilder.UseSqlServer("Server=siladertli\\SQLEXPRESS; inital Catalog= ApiMovieDb; integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=siladertli\\SQLEXPRESS; Initial Catalog= ApiMovieDb; integrated Security=true; TrustServerCertificate=true;");
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Cast> Casts { get; set; }
